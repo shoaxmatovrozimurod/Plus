@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import { useTranslation } from 'react-i18next';
 import { Sun, Moon, Eye, Globe, Menu } from 'lucide-react';
-import logoImg from './images/logotip.png'; // Logotip importi qaytdi
+import LogoImg from './images/logotip.png'; // Logotip importi qaytdi
 
 const Header = ({ theme, setTheme, toggleSidebar }) => {
   const { i18n, t } = useTranslation();
@@ -21,7 +21,7 @@ const Header = ({ theme, setTheme, toggleSidebar }) => {
         {/* 1. LOGOTIP ASL JOYIGA QAYTDI */}
         <div className="logo">
           <a href="/">
-            <img src={logoImg} alt="AstroVitals Logo" className="header-logo" />
+            <img src={LogoImg} alt="AstroVitals Logo" className="header-logo" />
           </a>
         </div>
       </div>
