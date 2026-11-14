@@ -1,0 +1,231 @@
+/* ===============================
+   DASHBOARD SAHIFASI STILLARI (EDGE CORE)
+   =============================== */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- SARLAVHA VA ASOSIY STATUS --- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.header-title h2 {
+  font-size: 1.8rem; /* Kattalashtirildi (1.5rem -> 1.8rem) */
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.header-title p {
+  color: var(--text-muted);
+  font-size: 1.1rem; /* Kattalashtirildi (0.95rem -> 1.1rem) */
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(22, 163, 74, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.status-dot {
+  width: 12px; /* Kattalashtirildi */
+  height: 12px;
+  background-color: #16a34a;
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+}
+
+.system-status span {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 1rem; /* Kattalashtirildi (0.85rem -> 1rem) */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+/* --- TEXNIK METRIKALAR (GRID) --- */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.metric-card {
+  background-color: var(--bg-panel);
+  padding: 1.5rem; /* Kengaytirildi */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metric-icon {
+  width: 45px; /* Kattalashtirildi */
+  height: 45px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  color: var(--text-muted);
+}
+
+.metric-icon.active {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--accent-color);
+}
+.metric-icon.warning {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: #eab308;
+}
+
+.metric-title {
+  font-size: 0.95rem; /* Kattalashtirildi (0.8rem -> 0.95rem) */
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.2rem; /* Kattalashtirildi (1.75rem -> 2.2rem) */
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.metric-sub {
+  font-size: 0.95rem; /* Kattalashtirildi (0.8rem -> 0.95rem) */
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+/* --- DSN SYNC VA GRAFIK QUTISI --- */
+.dashboard-content-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.panel-box {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.panel-title {
+  font-size: 1.2rem; /* Kattalashtirildi (1rem -> 1.2rem) */
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-placeholder {
+  height: 280px;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background-color: var(--bg-main);
+  font-weight: 500;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.1rem; /* Matn kattalashtirildi */
+}
+
+/* DSN Queue Ro'yxati */
+.dsn-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Kengaytirildi */
+}
+
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem; /* Kattalashtirildi */
+  background-color: var(--bg-main);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.queue-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tier-label {
+  font-size: 0.85rem; /* Kattalashtirildi (0.7rem -> 0.85rem) */
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.tier-1 { background-color: rgba(220, 38, 38, 0.1); color: #dc2626; }
+.tier-2 { background-color: rgba(234, 179, 8, 0.1); color: #eab308; }
+.tier-3 { background-color: rgba(37, 99, 235, 0.1); color: #2563eb; }
+
+.queue-name {
+  font-size: 1.05rem; /* Kattalashtirildi (0.85rem -> 1.05rem) */
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.queue-status {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.95rem; /* Kattalashtirildi (0.75rem -> 0.95rem) */
+  color: var(--text-muted);
+}
+
+@media screen and (max-width: 992px) {
+  .dashboard-content-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,100 @@
+/* ===============================
+   FAVQULODDA HOLAT STILLARI
+   =============================== */
+.emergency-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 4px solid #dc2626;
+  background-color: rgba(220, 38, 38, 0.05);
+  animation: bgPulse 1.5s infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% { background-color: rgba(220, 38, 38, 0.05); box-shadow: 0 0 20px rgba(220, 38, 38, 0.1); }
+  100% { background-color: rgba(220, 38, 38, 0.15); box-shadow: 0 0 40px rgba(220, 38, 38, 0.4); }
+}
+
+.em-icon-wrapper {
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.em-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.em-header p {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.em-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.em-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.4);
+}
+
+.em-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.6);
+}
+
+.em-btn.abort {
+  background-color: #000;
+  color: #ef4444;
+  border: 2px solid #ef4444;
+}
+
+.em-btn.abort:hover {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .em-header h2 { font-size: 1.8rem; }
+  .em-header p { font-size: 1rem; }
+  .em-btn { font-size: 0.95rem; padding: 1rem; }
+}

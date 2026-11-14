@@ -1,0 +1,124 @@
+/* ===============================
+   HEADER (TEPA PANEL) STILLARI
+   =============================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-color);
+  height: 70px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --- LOGOTIP STILLARI --- */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo {
+  height: 70px; /* Logotip balandligi qat'iy belgilandi */
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Gamburger menyu (faqat mobilda ko'rinadi) */
+.menu-btn {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  display: none; 
+}
+
+
+
+/* --- O'NG TOMONDAGI TUGMALAR --- */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle, .lang-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-main);
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-panel);
+  color: var(--accent-color);
+}
+
+.icon-btn.active {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.lang-select select {
+  background: transparent;
+  color: var(--text-main);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   MOBIL MOSLASHUVCHANLIK (HEADER UCHUN)
+   =============================== */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-logo {
+    height: 32px; /* Mobil ekranda logotip biroz kichrayadi */
+  }
+
+  /* Mobil ekranda joy torligi uchun o'rtadagi yozuvni yashiramiz */
+  .header-center {
+    display: none; 
+  }
+
+  .header-controls {
+    gap: 0.5rem;
+  }
+
+  /* Kichik ekranda gamburger menyuni ko'rsatish */
+  .menu-btn.mobile-only {
+    display: flex; 
+  }
+
+  .lang-select, .icon-btn {
+    padding: 0.3rem;
+  }
+}

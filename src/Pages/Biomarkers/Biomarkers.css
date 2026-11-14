@@ -1,0 +1,160 @@
+/* ===============================
+   BIOMETRIKA (HRV) STILLARI
+   =============================== */
+.biomarkers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.bio-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.bio-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* 3 ta asosiy ko'rsatkich (RMSSD, Baevsky, EDA) */
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.bio-card {
+  background-color: var(--bg-panel);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.bio-card:hover {
+  transform: translateY(-4px);
+}
+
+.bio-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-hrv { background-color: rgba(37, 99, 235, 0.1); color: #2563eb; }
+.icon-stress { background-color: rgba(220, 38, 38, 0.1); color: #dc2626; }
+.icon-eda { background-color: rgba(147, 51, 234, 0.1); color: #9333ea; }
+
+.bio-info {
+  flex: 1;
+}
+
+.bio-info h3 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bio-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.bio-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Grafik qutisi */
+.bio-chart-box {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.bio-chart-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+/* ===============================
+   MOBIL MOSLASHUVCHANLIK (BIOMETRIKA)
+   =============================== */
+@media screen and (max-width: 768px) {
+  /* Sarlavhalarni mobil ekranga moslab kichraytirish */
+  .bio-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .bio-header p {
+    font-size: 0.95rem;
+  }
+
+  /* Kartochkalarni 1 ta ustun qilib terish */
+  .bio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Kartochka ichki bo'shliqlari va o'lchamlarini ixchamlashtirish */
+  .bio-card {
+    padding: 1.25rem;
+    align-items: center; 
+  }
+
+  .bio-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .bio-value {
+    font-size: 1.8rem; /* Katta raqamlarni kichraytirish */
+  }
+
+  .bio-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Grafik qutisini telefon ekraniga moslash */
+  .bio-chart-box {
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .bio-chart-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Juda kichik ekranlar uchun qoshimcha to'g'rilash (masalan kichik telefonlar) */
+@media screen and (max-width: 480px) {
+  .bio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bio-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

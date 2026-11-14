@@ -1,0 +1,143 @@
+/* ===============================
+   XAVFSIZLIK (CRYPTO) STILLARI
+   =============================== */
+.security-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.sec-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.sec-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Xavfsizlik ko'rsatkichlari */
+.sec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sec-card {
+  background-color: var(--bg-panel);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-left: 4px solid #16a34a; /* Yaxshi holatni bildiradi */
+}
+
+.sec-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-info h3 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin: 0 0 0.2rem 0;
+}
+
+.sec-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.sec-status {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  width: max-content;
+}
+
+/* Terminal / Log Qutisi */
+.sec-logs-box {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.sec-logs-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.sec-logs-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.terminal-window {
+  background-color: #0f172a; /* To'q ko'k terminal rangi */
+  border-radius: 8px;
+  padding: 1rem;
+  height: 300px;
+  overflow-y: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  color: #38bdf8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #1e293b;
+}
+
+.log-line {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.25rem;
+}
+
+.log-time {
+  color: #94a3b8;
+  min-width: 80px;
+}
+
+.log-type.info { color: #3b82f6; }
+.log-type.success { color: #22c55e; }
+.log-type.warning { color: #eab308; }
+.log-type.error { color: #ef4444; }
+
+.log-message {
+  color: #f8fafc;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 768px) {
+  .sec-header h2 { font-size: 1.5rem; }
+  .sec-grid { grid-template-columns: 1fr; }
+  .terminal-window { font-size: 0.8rem; }
+}

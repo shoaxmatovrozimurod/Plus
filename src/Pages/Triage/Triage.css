@@ -1,0 +1,126 @@
+/* ===============================
+   TRIAGE (TIBBIY SARALASH) STILLARI
+   =============================== */
+.triage-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.triage-header h2 {
+  font-size: 1.8rem; /* Kattalashtirildi (1.5rem -> 1.8rem) */
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.triage-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem; /* Kattalashtirildi (0.95rem -> 1.1rem) */
+}
+
+.triage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Ekipaj kartochkalari */
+.crew-card {
+  background-color: var(--bg-panel);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+/* Xavf darajasi chizig'i */
+.triage-indicator {
+  height: 8px; /* Qalinlashtirildi */
+  width: 100%;
+}
+.indicator-p1 { background-color: #dc2626; } /* Qizil */
+.indicator-p2 { background-color: #eab308; } /* Sariq */
+.indicator-p3 { background-color: #16a34a; } /* Yashil */
+.indicator-p4 { background-color: #4b5563; } /* Qora/Kulrang */
+
+.crew-card-content {
+  padding: 1.5rem;
+}
+
+.crew-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.crew-info h3 {
+  font-size: 1.3rem; /* Kattalashtirildi (1.1rem -> 1.3rem) */
+  color: var(--text-main);
+  margin: 0 0 0.25rem 0;
+}
+
+.crew-role {
+  font-size: 0.95rem; /* Kattalashtirildi (0.8rem -> 0.95rem) */
+  color: var(--text-muted);
+  font-family: 'Space Mono', monospace;
+}
+
+.triage-badge {
+  font-size: 0.85rem; /* Kattalashtirildi (0.7rem -> 0.85rem) */
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.badge-p1 { background-color: rgba(220, 38, 38, 0.1); color: #dc2626; }
+.badge-p2 { background-color: rgba(234, 179, 8, 0.1); color: #eab308; }
+.badge-p3 { background-color: rgba(22, 163, 74, 0.1); color: #16a34a; }
+
+/* Hayotiy ko'rsatkichlar */
+.crew-vitals {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vital-box {
+  flex: 1;
+  background-color: var(--bg-main);
+  padding: 1rem; /* Kengaytirildi */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vital-label {
+  font-size: 0.9rem; /* Kattalashtirildi (0.75rem -> 0.9rem) */
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.vital-value {
+  font-size: 1.5rem; /* Kattalashtirildi (1.2rem -> 1.5rem) */
+  font-weight: 700;
+  color: var(--text-main);
+  font-family: 'Space Mono', monospace;
+}
+.vital-value.danger { color: #dc2626; }
+
+/* Harakat / Tavsiya */
+.crew-action {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem; /* Kattalashtirildi (0.85rem -> 1rem) */
+  font-weight: 600;
+}
+.action-critical { color: #dc2626; }
+.action-warning { color: #eab308; }
+.action-safe { color: #16a34a; }
