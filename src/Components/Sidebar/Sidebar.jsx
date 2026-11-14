@@ -19,37 +19,37 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
     return (
         <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
 
-            {/* MENYULAR (Logotip Header'ga o'tgani uchun, to'g'ridan-to'g'ri menyu boshlanadi) */}
+            {/* MENYULAR */}
             <nav className="nav-menu">
                 <div className="nav-group">
-                    <span className="nav-title">EKIPAJ HOLATI</span>
+                    <span className="nav-title">{t('nav_crew_status')}</span>
                     <NavLink to="/" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <Activity size={20} />
-                        <span>{t('dashboard', 'Asosiy Panel')}</span>
+                        <span>{t('dashboard')}</span>
                     </NavLink>
                     <NavLink to="/triage" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <Users size={20} />
-                        <span>{t('triage', 'Tibbiy Saralash')}</span>
+                        <span>{t('triage')}</span>
                     </NavLink>
                     <NavLink to="/biomarkers" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <HeartPulse size={20} />
-                        <span>Biometrika (HRV)</span>
+                        <span>{t('nav_biometrics')}</span>
                     </NavLink>
                 </div>
 
                 <div className="nav-group mt-4">
-                    <span className="nav-title">TIZIM VA ALOQA</span>
+                    <span className="nav-title">{t('nav_system_comm')}</span>
                     <NavLink to="/system" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <Cpu size={20} />
-                        <span>Tizim Yadrosi (DSP)</span>
+                        <span>{t('nav_core_dsp')}</span>
                     </NavLink>
                     <NavLink to="/telemetry" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <Radio size={20} />
-                        <span>Telemetriya</span>
+                        <span>{t('nav_telemetry')}</span>
                     </NavLink>
                     <NavLink to="/security" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                         <ShieldCheck size={20} />
-                        <span>Xavfsizlik (Crypto)</span>
+                        <span>{t('nav_security')}</span>
                     </NavLink>
                 </div>
             </nav>
@@ -58,13 +58,13 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
             <div className="sidebar-bottom">
                 <NavLink to="/settings" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>
                     <SettingsIcon size={20} />
-                    <span>{t('settings', 'Sozlamalar')}</span>
+                    <span>{t('settings')}</span>
                 </NavLink>
 
                 <div className="emergency-box">
                     <NavLink to="/emergency" className="btn-emergency" style={{ textDecoration: 'none' }}>
                         <AlertTriangle size={24} />
-                        {t('emergency', 'FAVQULODDA HOLAT')}
+                        {t('emergency')}
                     </NavLink>
                 </div>
             </div>

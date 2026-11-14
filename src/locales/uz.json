@@ -1,6 +1,12 @@
 {
   "dashboard": "Asosiy Panel",
   "triage": "Tibbiy Saralash",
+  "nav_crew_status": "EKIPAJ HOLATI",
+  "nav_biometrics": "Biometrika (HRV)",
+  "nav_system_comm": "TIZIM VA ALOQA",
+  "nav_core_dsp": "Tizim Yadrosi (DSP)",
+  "nav_telemetry": "Telemetriya",
+  "nav_security": "Xavfsizlik (Crypto)",
   "settings": "Sozlamalar",
   "emergency": "FAVQULODDA HOLAT",
   "welcome_commander": "Xush kelibsiz, Komandir!",

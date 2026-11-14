@@ -1,6 +1,12 @@
 {
   "dashboard": "Dashboard",
   "triage": "Crew Triage",
+  "nav_crew_status": "CREW STATUS",
+  "nav_biometrics": "Biometrics (HRV)",
+  "nav_system_comm": "SYSTEM & COMM",
+  "nav_core_dsp": "Core System (DSP)",
+  "nav_telemetry": "Telemetry",
+  "nav_security": "Security (Crypto)",
   "settings": "Settings",
   "emergency": "EMERGENCY OVERRIDE",
   "welcome_commander": "Welcome, Commander!",
